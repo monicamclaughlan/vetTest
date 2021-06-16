@@ -1,0 +1,43 @@
+.splash { 
+    background-color: #1B262C;
+    height: 100vh;
+    text-align: center;
+}
+
+.title { 
+    color: white;
+    padding: 1em;
+    margin: 0;
+    font-family: "Comfortaa", cursive;
+}
+
+.subtitle { 
+    color: #BBE1FA;
+    font-family: "Work sans", sans-serif;
+
+}
+
+button {
+    background-color: #3282B8;
+    border: none;
+    border-radius: 5px;
+    width: 60%;
+    padding: 0.5em;
+    margin: 3em;
+    box-shadow: 0 3px 5px -2px rgba(0, 0, 0, 0.5);
+    color: #BBE1FA;
+    font-size: 1.2em;
+    font-family: "Work sans", sans-serif;
+}
+
+button:hover {
+    background-color: #0e66a1;
+  }
+  
+  button:active {
+    -webkit-transition: all 0.1s ease 0s;
+    transition: all 0.1s ease 0s;
+    -webkit-transform: translate(0px, 1px);
+            transform: translate(0px, 1px);
+    background-color: #5bb1eb;
+  }

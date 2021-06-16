@@ -1,0 +1,53 @@
+h2 { 
+    text-align: center;
+    color: #BBE1FA;
+}
+
+form { 
+    text-align: center;
+}
+
+.canine-list { 
+    /* height: 100vh; */
+    background-color: #1B262C;
+}
+
+.canine-test { 
+    display:flex;
+    background-color: #3282B8;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 10px 0;
+    height: 15%;
+}
+
+.test-title { 
+    width: 100%;
+    box-shadow: none;
+    margin: 10px 0 10px 0;
+    flex-grow: 2;
+    text-align: left;
+}
+
+.favorite { 
+    width: 40px;
+    height: 35px;
+    box-shadow: none;
+    margin: 0;
+}
+
+.test-details-page a { 
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.test-details { 
+    margin: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+.test-details h1 { 
+    text-align: center;
+}

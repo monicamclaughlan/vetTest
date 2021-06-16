@@ -1,0 +1,12 @@
+header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #1B262C;
+}
+
+header a { 
+    padding: 10px 10px 0 0;
+    font-size: 40px;
+    color: lightblue;
+}
+
