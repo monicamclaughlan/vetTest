@@ -11,23 +11,40 @@ const Favorites = ({favorites, removeFromFavorites}) => {
         return ( 
             <div className="favorites" key={index}>
                 <Link to={`/canine/${fav.id}`} ><button className="favorite-title">{fav.title}</button></Link>
-                <button className="remove" onClick={() => removeFromFavorites(index)}><IoMdRemoveCircle/></button>
+                <button className="remove" onClick={() => {
+                    removeFromFavorites(index)
+                    fav.favorite = false}}>
+                        <IoMdRemoveCircle/></button>
             </div>
         )}
         else if (fav.species === "Feline"){ 
             return ( 
                 <div className="favorites" key={index}>
                 <Link to={`/feline/${fav.id}`} ><button className="favorite-title">{fav.title}</button></Link>
-                <button className="remove" onClick={() => removeFromFavorites(index)}><IoMdRemoveCircle/></button>
+                <button className="remove" onClick={() => {
+                    removeFromFavorites(index)
+                    fav.favorite=false}}>
+                        <IoMdRemoveCircle/></button>
             </div>
             )
         }
     })
-    return (
-        <div className="favorite-list">
-            {favoriteTests}
-        </div>
-    )
+
+    const noFavorites = () => { 
+        return ( 
+            <div className="no-favorites">
+            <h2>No Favorites Yet! </h2>
+            <Link to="/"><button>Back to Home</button></Link>
+            </div>
+        )
+    }
+    return favorites.length > 0 ? 
+    <div className="favorite-list">
+        {favoriteTests} 
+    </div>
+    
+    : noFavorites() 
+   
 }
 
 export default Favorites

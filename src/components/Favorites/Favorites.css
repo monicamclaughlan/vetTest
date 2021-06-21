@@ -25,3 +25,13 @@
     box-shadow: none;
     margin: 0;
 }
+
+.no-favorites a { 
+    color: white;
+    text-decoration: none; 
+}
+
+.no-favorites button { 
+    text-align: center;
+    margin-left: 85px;
+}
