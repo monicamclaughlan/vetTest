@@ -57,20 +57,20 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 
 | Component        | Priority | Estimated Time | Time Invetsted | Actual Time |
 | ---------------- | :------: | :------------: | :------------: | :---------: |
-| Project Planning |    H     |      6hrs      |     hrs        |      hrs    |
-| Create react app |    H     |      1hr       |     hrs        |      hrs    |
-| Set up Routes    |    H     |      1hrs      |     hrs        |      hrs    |
-| Header           |    H     |      1hrs      |     hrs        |      hrs    |
-| Footer           |    H     |      1hrs      |     hrs        |      hrs    |
-| Canine           |    H     |      3hrs      |     hrs        |   hrs       |
-| Feline           |    H     |      3hrs      |     hrs        |   hrs       |
-| Test             |    H     |      3hrs      |     hrs        |   hrs       |
-| Favorites        |    H     |      3hrs      |     hrs        |   hrs       |
-| Search Form      |    H     |      3hrs      |     hrs        |   1hrs      |
-| Creating API     |    H     |      6hrs      |     hrs        |   hrs       |
-| Learning PHP     |    H     |      10hrs     |     hrs        |   hrs       | 
-| Using Laravel    |    H     |      5hrs      |     hrs        |   hrs       |
-| Style Components |    H     |      4hrs      |     hrs        |     hrs     |
+| Project Planning |    H     |      6hrs      |     8hrs        |      8hrs    |
+| Create react app |    H     |      1hr       |     2hrs        |      2hrs    |
+| Set up Routes    |    H     |      1hrs      |     1hrs        |      1hrs    |
+| Header           |    H     |      1hrs      |     1hrs        |      1hrs    |
+| Footer           |    H     |      1hrs      |     1hrs        |      1hrs    |
+| Canine           |    H     |      3hrs      |     3hrs        |   3hrs       |
+| Feline           |    H     |      3hrs      |     3hrs        |   3hrs       |
+| Test             |    H     |      3hrs      |     2hrs        |   2hrs       |
+| Favorites        |    H     |      3hrs      |     2hrs        |   2hrs       |
+| Search Form      |    H     |      3hrs      |     1hrs        |   1hrs      |
+| Creating API     |    H     |      6hrs      |     6hrs        |   6hrs       |
+| Learning PHP     |    H     |      10hrs     |     10hrs        |   10hrs       | 
+| Using Laravel    |    H     |      5hrs      |     4hrs        |   4hrs       |
+| Style Components |    H     |      4hrs      |     4hrs        |     4hrs     |
 | User model/auth  |    L     |      10hrs     |     hrs        |    hrs      |
 | Total            |    H     |      60hrs     |     hrs        |    hrs      |
 
@@ -79,6 +79,39 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 ## Code Snippet
 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description. Code snippet should not be greater than 10 lines of code.
+
+```
+    const handleChange = (e) => {
+        e.preventDefault();
+        setFilteredTests(tests.filter(t => t.title.toLowerCase().includes(e.target.value.toLowerCase()) ))
+      }
+```
+
+```
+const favoriteTests = favorites.map((fav, index) => { 
+        if (fav.species === "Canine"){
+        return ( 
+            <div className="favorites" key={index}>
+                <Link to={`/canine/${fav.id}`} ><button className="favorite-title">{fav.title}</button></Link>
+                <button className="remove" onClick={() => {
+                    removeFromFavorites(index)
+                    fav.favorite = false}}>
+                        <IoMdRemoveCircle/></button>
+            </div>
+        )}
+        else if (fav.species === "Feline"){ 
+            return ( 
+                <div className="favorites" key={index}>
+                <Link to={`/feline/${fav.id}`} ><button className="favorite-title">{fav.title}</button></Link>
+                <button className="remove" onClick={() => {
+                    removeFromFavorites(index)
+                    fav.favorite=false}}>
+                        <IoMdRemoveCircle/></button>
+            </div>
+            )
+        }
+    })
+```    
 
 
 
