@@ -6,7 +6,7 @@ import {RiHeartFill} from 'react-icons/ri'
 const Header = () => {
     return (
         <header>
-            <Link to="favorites"><RiHeartFill /></Link>
+            <Link to="/favorites"><RiHeartFill /></Link>
         </header>
     )
 }
