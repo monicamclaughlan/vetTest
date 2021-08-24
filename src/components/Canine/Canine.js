@@ -10,7 +10,7 @@ const Canine = ({tests, addToFavorites, filteredTests, setFilteredTests}) => {
     const canine = result.map((test, index) => { 
         return ( 
             <div className="canine-test" key={index}>
-                <Link to={`/canine/${test.id}`} ><button className="test-title">{test.title}</button></Link>
+                <Link to={`/canine/${test.id}`} onClick={() => setFilteredTests(tests)}><button className="test-title">{test.title}</button></Link>
                 <button className="favorite" onClick={() => {
                     addToFavorites(test)
                     test.favorite = true}}>

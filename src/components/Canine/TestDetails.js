@@ -24,6 +24,7 @@ const TestDetails = ({match, test, setTest}) => {
         getTest()
       }, [])
 
+
      
         return (
             <div className="test-details-page">

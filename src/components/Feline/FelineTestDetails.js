@@ -21,10 +21,11 @@ const FelineTestDetails = ({match, test, setTest}) => {
         getTest()
       }, [])
 
+
      
         return (
             <div className="test-details-page">
-            <Link to="/feline">Back to Tests</Link>
+            <Link to="/feline" >Back to Tests</Link>
             <div className="test-details">
                 
                 <h1>{test.title}</h1>
